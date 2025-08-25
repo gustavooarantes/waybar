@@ -1,0 +1,376 @@
+/* vim:fileencoding=utf-8:foldmethod=marker
+*/
+
+/* Define colors */
+/* @define-color background  rgba(21, 21, 32, 0.75); */
+/* @define-color background  #151520; */
+ /* #f38ba8 */
+ /* #45475a */
+ /* #f5c2e7 */
+ /* #cba6f7 */
+ /* #94e2d5 */
+ /* #a6e3a1 */
+ /* #b4befe */
+ /* #b4befe */
+ /* #eba0ac */
+ /* #89b4fa */
+
+/* Reset all styles */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* Keyframes for main bar criticals */
+@keyframes blink-critical-text {
+  to {
+    color: #f38ba8;
+  }
+}
+
+/* Keyframes for main bar modifiers */
+@keyframes blink-modifier-text {
+  to {
+    color: #45475a;
+  }
+}
+
+/* Main bar defaults */
+#waybar.main {
+  background: transparent;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 10pt;
+  font-weight: 500;
+}
+
+#waybar.main button {
+  font-family: JetBrains Mono Nerd Font;
+  font-size: 10pt;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Main bar modules */
+#waybar.main #custom-nvidia,
+#waybar.main #custom-weather,
+#waybar.main #custom-weather,
+#waybar.main #custom-battery,
+#waybar.main #keyboard-state,
+#waybar.main #network,
+#waybar.main #battery,
+#waybar.main #backlight,
+#waybar.main #clock,
+#waybar.main #cpu,
+#waybar.main #language,
+#waybar.main #memory.swap,
+#waybar.main #memory.ram,
+#waybar.main #submap,
+#waybar.main #pulseaudio,
+#waybar.main #temperature,
+#waybar.main #tray,
+#waybar.main #window,
+#waybar.main #disk {
+  padding-left: 8pt;
+  padding-right: 8pt;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background: transparent;
+}
+
+#waybar.main #tray {
+  padding-right: 6pt;
+}
+
+#waybar.main #custom-weather {
+  padding-right: 3pt;
+}
+
+/* Module colors */
+#waybar.main #custom-nvidia,
+#waybar.main #cpu,
+#waybar.main #temperature,
+#waybar.main #memory.ram,
+#waybar.main #memory.swap,
+#waybar.main #disk,
+#waybar.main #network {
+  color: #f5c2e7;
+}
+
+#waybar.main #pulseaudio {
+  color: #cba6f7;
+}
+
+#waybar.main #custom-battery,
+#waybar.main #language,
+#waybar.main #backlight,
+#waybar.main #battery {
+  color: #94e2d5;
+}
+
+#waybar.main #custom-weather,
+#waybar.main #clock {
+  color: #a6e3a1;
+}
+
+#waybar.main #window {
+  color: #b4befe;
+  margin-top: 0px;
+}
+
+#waybar.main #network.info {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #45475a;
+  background: transparent;
+}
+
+#waybar.main #network.info.wifi.normal,
+#waybar.main #network.info.ethernet {
+  color: #f5c2e7;
+  padding-right: 15px;
+}
+
+#waybar.main #network.info.wifi {
+  color: #f38ba8;
+  padding-right: 15px;
+}
+
+/* Submap */
+#waybar.main #submap.󰲏 {
+  color: #eba0ac;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+#waybar.main #submap. {
+  color: #a6e3a1;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Main bar criticals */
+#waybar.main #custom-nvidia.critical,
+#waybar.main #custom-battery.critical,
+#waybar.main #workspaces button.urgent,
+#waybar.main #workspaces button.special.urgent,
+#waybar.main #memory.swap.critical,
+#waybar.main #memory.ram.critical,
+#waybar.main #cpu.critical,
+#waybar.main #temperature.critical,
+#waybar.main #battery.critical.discharging {
+  color: #45475a;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-critical-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Main bar warnings */
+#waybar.main #pulseaudio.output.muted,
+#waybar.main #pulseaudio.input.source-muted {
+  color: #45475a;
+}
+
+#waybar.main #custom-battery.warning,
+#waybar.main #battery.warning.discharging {
+  color: #f38ba8;
+}
+
+/* Battery charging */
+#waybar.main #custom-battery.charging {
+  color: #94e2d5;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Workspace */
+/* Default workspace settings */
+#waybar.main #workspaces button {
+  color: #45475a;
+  background: transparent;
+  border: 1.5px solid transparent;
+  padding-left: 2pt;
+  padding-right: 2pt;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  transition: all 0.25s ease;
+}
+
+/* Focused workspace */
+#waybar.main #workspaces button.visible {
+  color: #b4befe;
+}
+
+/* Focused workspace & monitor */
+#waybar.main #workspaces button.active {
+  color: #b4befe;
+  border: 1.5px solid #45475a;
+}
+
+/* Style when cursor is on the button */
+#waybar.main #workspaces button:hover {
+  color: #b4befe;
+}
+
+/* Special workplace animation */
+#waybar.main #workspaces button.special.active {
+  border: 1.5px solid transparent;
+  color: #b4befe;
+  transition: all 0s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Custom slashes as spacers */
+#waybar.main #custom-spacer1,
+#waybar.main #custom-spacer2,
+#waybar.main #custom-spacer3 {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #45475a;
+  background: transparent;
+}
+
+/* Custom tray icon */
+#waybar.main #custom-trayicon {
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #89b4fa;
+  background: transparent;
+  padding-right: 6pt;
+  padding-left: 2pt;
+}
+
+/* Tooltip */
+tooltip {
+  background: rgba(21, 21, 32, 0.75);
+  border: 3px solid #45475a;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: "JetBrains Mono Nerd Font";
+}
+
+#waybar.main #tray menu {
+  background: rgba(21, 21, 32, 0.75);
+  border: 3px solid #45475a;
+  border-radius: 8px;
+}
+
+/* Indicator bar keyframes */
+@keyframes blink-critical-battery {
+  to {
+    border-color: #f38ba8;
+  }
+}
+
+@keyframes blink-warning-battery {
+  to {
+    border-color: #f38ba8;
+  }
+}
+
+@keyframes blink-discharging-battery {
+  to {
+    border-color: #f38ba8;
+  }
+}
+
+@keyframes blink-charging-battery {
+  to {
+    border-color: #94e2d5;
+  }
+}
+
+@keyframes blink-full-battery {
+  to {
+    border-color: #94e2d5;
+  }
+}
+
+/* indicator bar battery module */
+
+/* Set defaults for indicator bar */
+#waybar.indicator {
+  font-size: 27px;
+  /* This makes indicator thicker */
+  color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Set "battery bar" style */
+#waybar.indicator #custom-batteryindicator {
+  border: 2.5px solid #45475a;
+  background: rgba(21, 21, 32, 0.75);
+  border-radius: 8pt;
+  padding-left: 2237.5px;
+  /* Use this for padding:  */
+  /* (H_rez / scaling) - L_margin -R_margin - 2 * border - (font-size / 2)*/
+  /* For example: (2880px / 1.25) - 24 - 24 - 2 * 2.5 - (27 / 2) = 2237.5px */
+}
+
+/* Blink red when battery is very low */
+#waybar.indicator #custom-batteryindicator.critical {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-critical-battery;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Blink red twice when battry is low battery */
+#waybar.indicator #custom-batteryindicator.warning {
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-name: blink-warning-battery;
+  animation-duration: 0.2s;
+  animation-timing-function: steps(15);
+}
+
+/* Blink once red when disconnected from AC */
+#waybar.indicator #custom-batteryindicator.discharging {
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-name: blink-discharging-battery;
+  animation-duration: 0.3s;
+  animation-timing-function: steps(15);
+}
+
+/* Blink once cyan when plugged to AC */
+#waybar.indicator #custom-batteryindicator.charging {
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-name: blink-charging-battery;
+  animation-duration: 0.3s;
+  animation-timing-function: steps(15);
+}
+
+/* Blink cyan twice when battery is full */
+#waybar.indicator #custom-batteryindicator.full {
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-name: blink-full-battery;
+  animation-duration: 0.2s;
+  animation-timing-function: steps(15);
+}
