@@ -2,18 +2,14 @@
 */
 
 /* Define colors */
-/* @define-color background  rgba(21, 21, 32, 0.75); */
-/* @define-color background  #151520; */
- /* #f38ba8 */
- /* #45475a */
- /* #f5c2e7 */
- /* #cba6f7 */
- /* #94e2d5 */
- /* #a6e3a1 */
- /* #b4befe */
- /* #b4befe */
- /* #eba0ac */
- /* #89b4fa */
+@define-color background #011627;
+@define-color foreground #d6deeb;
+@define-color red #EF5350;
+@define-color green #22da6e;
+@define-color yellow #c5e478;
+@define-color blue #82AAFF;
+@define-color magenta #C792EA;
+@define-color cyan #21c7a8;
 
 /* Reset all styles */
 * {
@@ -29,20 +25,20 @@
 /* Keyframes for main bar criticals */
 @keyframes blink-critical-text {
   to {
-    color: #f38ba8;
+    color: @red;
   }
 }
 
 /* Keyframes for main bar modifiers */
 @keyframes blink-modifier-text {
   to {
-    color: #45475a;
+    color: @blue;
   }
 }
 
 /* Main bar defaults */
 #waybar.main {
-  background: rgba(21, 21, 32, 0.5);
+  background: rgb(1, 22, 39); /* Usando o background do tema com transparência */
   border-radius: 15px;
   font-family: "JetBrains Mono Nerd Font";
   font-size: 10pt;
@@ -58,7 +54,6 @@
 
 /* Main bar modules */
 #waybar.main #custom-nvidia,
-#waybar.main #custom-weather,
 #waybar.main #custom-weather,
 #waybar.main #custom-battery,
 #waybar.main #keyboard-state,
@@ -80,7 +75,6 @@
   padding-right: 8pt;
   padding-bottom: 4px;
   padding-top: 4px;
-  background: transparent;
 }
 
 #waybar.main #tray {
@@ -97,53 +91,52 @@
 #waybar.main #temperature,
 #waybar.main #memory.ram,
 #waybar.main #memory.swap,
-#waybar.main #disk,
-#waybar.main #network {
-  color: #f5c2e7;
+#waybar.main #disk {
+  color: @cyan;
 }
 
 #waybar.main #pulseaudio {
-  color: #cba6f7;
+  color: @magenta;
 }
 
 #waybar.main #custom-battery,
 #waybar.main #language,
 #waybar.main #backlight,
 #waybar.main #battery {
-  color: #94e2d5;
+  color: @green;
 }
 
 #waybar.main #custom-weather,
 #waybar.main #clock {
-  color: #a6e3a1;
+  color: @yellow;
 }
 
 #waybar.main #window {
-  color: #b4befe;
+  color: @blue;
   margin-top: 0px;
 }
 
 #waybar.main #network.info {
   padding-right: 10px;
   padding-left: 10px;
-  color: #45475a;
+  color: @foreground;
   background: transparent;
 }
 
 #waybar.main #network.info.wifi.normal,
 #waybar.main #network.info.ethernet {
-  color: #f5c2e7;
+  color: @cyan;
   padding-right: 15px;
 }
 
 #waybar.main #network.info.wifi {
-  color: #f38ba8;
+  color: @red;
   padding-right: 15px;
 }
 
 /* Submap */
 #waybar.main #submap.󰲏 {
-  color: #eba0ac;
+  color: @yellow;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: blink-modifier-text;
@@ -152,7 +145,7 @@
 }
 
 #waybar.main #submap. {
-  color: #a6e3a1;
+  color: @green;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: blink-modifier-text;
@@ -170,7 +163,7 @@
 #waybar.main #cpu.critical,
 #waybar.main #temperature.critical,
 #waybar.main #battery.critical.discharging {
-  color: #45475a;
+  color: @red;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: blink-critical-text;
@@ -181,17 +174,17 @@
 /* Main bar warnings */
 #waybar.main #pulseaudio.output.muted,
 #waybar.main #pulseaudio.input.source-muted {
-  color: #45475a;
+  color: @blue;
 }
 
 #waybar.main #custom-battery.warning,
 #waybar.main #battery.warning.discharging {
-  color: #f38ba8;
+  color: @red;
 }
 
 /* Battery charging */
 #waybar.main #custom-battery.charging {
-  color: #94e2d5;
+  color: @green;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: blink-modifier-text;
@@ -202,7 +195,7 @@
 /* Workspace */
 /* Default workspace settings */
 #waybar.main #workspaces button {
-  color: #45475a;
+  color: @foreground;
   background: transparent;
   border: 1.5px solid transparent;
   padding-left: 2pt;
@@ -217,24 +210,24 @@
 
 /* Focused workspace */
 #waybar.main #workspaces button.visible {
-  color: #b4befe;
+  color: @blue;
 }
 
 /* Focused workspace & monitor */
 #waybar.main #workspaces button.active {
-  color: #b4befe;
-  border: 1.5px solid #45475a;
+  color: @blue;
+  border: 1.5px solid @cyan;
 }
 
 /* Style when cursor is on the button */
 #waybar.main #workspaces button:hover {
-  color: #b4befe;
+  color: @blue;
 }
 
 /* Special workplace animation */
 #waybar.main #workspaces button.special.active {
   border: 1.5px solid transparent;
-  color: #b4befe;
+  color: @blue;
   transition: all 0s ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -249,7 +242,7 @@
 #waybar.main #custom-spacer3 {
   font-size: 10pt;
   font-weight: bold;
-  color: #45475a;
+  color: @foreground;
   background: transparent;
 }
 
@@ -258,7 +251,7 @@
   font-size: 11pt;
   font-weight: bold;
   font-style: italic;
-  color: #89b4fa;
+  color: @blue;
   background: transparent;
   padding-right: 6pt;
   padding-left: 2pt;
@@ -266,69 +259,63 @@
 
 /* Tooltip */
 tooltip {
-  background: rgba(21, 21, 32, 0.75);
-  border: 3px solid #45475a;
+  background: rgba(1, 22, 39, 0.75);
+  border: 3px solid @cyan;
   border-radius: 8px;
   font-weight: 500;
   font-family: "JetBrains Mono Nerd Font";
 }
 
 #waybar.main #tray menu {
-  background: rgba(21, 21, 32, 0.75);
-  border: 3px solid #45475a;
+  background: rgba(1, 22, 39, 0.75);
+  border: 3px solid @cyan;
   border-radius: 8px;
 }
 
 /* Indicator bar keyframes */
 @keyframes blink-critical-battery {
   to {
-    border-color: #f38ba8;
+    border-color: @red;
   }
 }
 
 @keyframes blink-warning-battery {
   to {
-    border-color: #f38ba8;
+    border-color: @red;
   }
 }
 
 @keyframes blink-discharging-battery {
   to {
-    border-color: #f38ba8;
+    border-color: @red;
   }
 }
 
 @keyframes blink-charging-battery {
   to {
-    border-color: #94e2d5;
+    border-color: @green;
   }
 }
 
 @keyframes blink-full-battery {
   to {
-    border-color: #94e2d5;
+    border-color: @green;
   }
 }
 
 /* indicator bar battery module */
-
-/* Set defaults for indicator bar */
 #waybar.indicator {
   font-size: 27px;
-  /* This makes indicator thicker */
   color: rgba(0, 0, 0, 0);
   background: rgba(0, 0, 0, 0);
 }
 
 /* Set "battery bar" style */
 #waybar.indicator #custom-batteryindicator {
-  border: 2.5px solid #45475a;
-  background: rgba(21, 21, 32, 0.75);
+  border: 2.5px solid @cyan;
+  background: rgba(1, 22, 39, 0.75);
   border-radius: 8pt;
   padding-left: 2237.5px;
-  /* Use this for padding:  */
-  /* (H_rez / scaling) - L_margin -R_margin - 2 * border - (font-size / 2)*/
-  /* For example: (2880px / 1.25) - 24 - 24 - 2 * 2.5 - (27 / 2) = 2237.5px */
 }
 
 /* Blink red when battery is very low */
