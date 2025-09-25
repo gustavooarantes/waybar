@@ -1,15 +1,18 @@
-/* vim:fileencoding=utf-8:foldmethod=marker
+/* vim:fileencoding=utf-7:foldmethod=marker
 */
 
 /* Define colors */
-@define-color background #011627;
-@define-color foreground #d6deeb;
-@define-color red #EF5350;
-@define-color green #22da6e;
-@define-color yellow #c5e478;
-@define-color blue #82AAFF;
-@define-color magenta #C792EA;
-@define-color cyan #21c7a8;
+/* Replaced with TokyoNight Moon colors */
+@define-color background #222436; /* From primary.background */
+@define-color foreground #c8d3f5; /* From primary.foreground */
+@define-color red #ff757f;     /* From normal.red */
+@define-color green #c3e88d;   /* From normal.green */
+@define-color yellow #ffc777;  /* From normal.yellow */
+@define-color blue #82aaff;    /* From normal.blue */
+@define-color magenta #c099ff;  /* From normal.magenta */
+@define-color cyan #86e1fc;    /* From normal.cyan */
+/* Use the black from normal colors for better contrast with the background */
+@define-color black #1b1d2b;   /* From normal.black */ 
 
 /* Reset all styles */
 * {
@@ -38,7 +41,7 @@
 
 /* Main bar defaults */
 #waybar.main {
-  background: rgb(1, 22, 39); /* Usando o background do tema com transparência */
+  background: @background; /* Usando o background do tema */
   border-radius: 15px;
   font-family: "JetBrains Mono Nerd Font";
   font-size: 10pt;
@@ -259,7 +262,7 @@
 
 /* Tooltip */
 tooltip {
-  background: rgba(1, 22, 39, 0.75);
+  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
   border: 3px solid @cyan;
   border-radius: 8px;
   font-weight: 500;
@@ -267,7 +270,7 @@ tooltip {
 }
 
 #waybar.main #tray menu {
-  background: rgba(1, 22, 39, 0.75);
+  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
   border: 3px solid @cyan;
   border-radius: 8px;
 }
@@ -313,7 +316,7 @@ tooltip {
 /* Set "battery bar" style */
 #waybar.indicator #custom-batteryindicator {
   border: 2.5px solid @cyan;
-  background: rgba(1, 22, 39, 0.75);
+  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
   border-radius: 8pt;
   padding-left: 2237.5px;
 }
