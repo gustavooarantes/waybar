@@ -2,17 +2,15 @@
 */
 
 /* Define colors */
-/* Replaced with TokyoNight Moon colors */
-@define-color background #222436; /* From primary.background */
-@define-color foreground #c8d3f5; /* From primary.foreground */
-@define-color red #ff757f;     /* From normal.red */
-@define-color green #c3e88d;   /* From normal.green */
-@define-color yellow #ffc777;  /* From normal.yellow */
-@define-color blue #82aaff;    /* From normal.blue */
-@define-color magenta #c099ff;  /* From normal.magenta */
-@define-color cyan #86e1fc;    /* From normal.cyan */
-/* Use the black from normal colors for better contrast with the background */
-@define-color black #1b1d2b;   /* From normal.black */ 
+@define-color background #011627; /* From primary.background */
+@define-color foreground #d6deeb; /* From primary.foreground */
+@define-color red #EF5350;        /* From normal.red */
+@define-color green #22da6e;      /* From normal.green */
+@define-color yellow #c5e478;     /* From normal.yellow */
+@define-color blue #82AAFF;       /* From normal.blue */
+@define-color magenta #C792EA;    /* From normal.magenta */
+@define-color cyan #21c7a8;       /* From normal.cyan */
+@define-color black #011627;      /* From normal.black */
 
 /* Reset all styles */
 * {
