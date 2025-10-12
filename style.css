@@ -2,17 +2,30 @@
 */
 
 /* Define colors */
-/* Replaced with Rose Pine (default) colors */
-@define-color background #191724; /* From base */
-@define-color foreground #e0def4; /* From text */
-@define-color red #eb6f92;        /* From love */
-@define-color green #31748f;      /* From pine */
-@define-color yellow #f6c177;     /* From gold */
-@define-color blue #9ccfd8;       /* From foam */
-@define-color magenta #c4a7e7;    /* From iris */
-@define-color cyan #ebbcba;       /* From rose */
-/* Use the black from normal colors for better contrast with the background */
-@define-color black #1f1d2e;      /* From surface */
+/* Replaced with TokyoNight (night) colors */
+@define-color background #1a1b26; /* From primary background */
+@define-color foreground #c0caf5; /* From primary foreground */
+@define-color red #f7768e; /* From normal red */
+@define-color green #9ece6a; /* From normal green */
+@define-color yellow #e0af68; /* From normal yellow */
+@define-color blue #7aa2f7; /* From normal blue */
+@define-color magenta #bb9af7; /* From normal magenta */
+@define-color cyan #7dcfff; /* From normal cyan */
+@define-color black #15161e; /* From normal black */
+
+/* Optionally keep these if you use animation/hover contrast */
+@define-color bright-red #ff899d;
+@define-color bright-green #9fe044;
+@define-color bright-yellow #faba4a;
+@define-color bright-blue #8db0ff;
+@define-color bright-magenta #c7a9ff;
+@define-color bright-cyan #a4daff;
+@define-color bright-black #414868;
+@define-color bright-white #c0caf5;
+
+/* Accents */
+@define-color orange #ff9e64; /* index 16 */
+@define-color error  #db4b4b; /* index 17 */
 
 /* Reset all styles */
 * {
@@ -41,7 +54,7 @@
 
 /* Main bar defaults */
 #waybar.main {
-  background: @background; /* Usando o background do tema */
+  background: @background;
   border-radius: 15px;
   font-family: "JetBrains Mono Nerd Font";
   font-size: 10pt;
@@ -49,7 +62,7 @@
 }
 
 #waybar.main button {
-  font-family: JetBrains Mono Nerd Font;
+  font-family: "JetBrains Mono Nerd Font";
   font-size: 10pt;
   font-weight: 500;
   transition: all 0.15s ease-in-out;
@@ -262,7 +275,7 @@
 
 /* Tooltip */
 tooltip {
-  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
+  background: rgba(26, 27, 38, 0.75); /* @background 75% */
   border: 3px solid @cyan;
   border-radius: 8px;
   font-weight: 500;
@@ -270,7 +283,7 @@ tooltip {
 }
 
 #waybar.main #tray menu {
-  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
+  background: rgba(26, 27, 38, 0.75);
   border: 3px solid @cyan;
   border-radius: 8px;
 }
@@ -316,7 +329,7 @@ tooltip {
 /* Set "battery bar" style */
 #waybar.indicator #custom-batteryindicator {
   border: 2.5px solid @cyan;
-  background: rgba(34, 36, 54, 0.75); /* Using @background with 75% opacity */
+  background: rgba(26, 27, 38, 0.75); /* @background 75% */
   border-radius: 8pt;
   padding-left: 2237.5px;
 }
@@ -330,7 +343,7 @@ tooltip {
   animation-timing-function: steps(15);
 }
 
-/* Blink red twice when battry is low battery */
+/* Blink red twice when battery is low */
 #waybar.indicator #custom-batteryindicator.warning {
   animation-iteration-count: 4;
   animation-direction: alternate;
