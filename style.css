@@ -2,30 +2,30 @@
 */
 
 /* Define colors */
-/* Replaced with TokyoNight (night) colors */
-@define-color background #1a1b26; /* From primary background */
-@define-color foreground #c0caf5; /* From primary foreground */
-@define-color red #f7768e; /* From normal red */
-@define-color green #9ece6a; /* From normal green */
-@define-color yellow #e0af68; /* From normal yellow */
-@define-color blue #7aa2f7; /* From normal blue */
-@define-color magenta #bb9af7; /* From normal magenta */
-@define-color cyan #7dcfff; /* From normal cyan */
-@define-color black #15161e; /* From normal black */
+/* Converted from TokyoNight to Rose Pine */
+@define-color background #191724; /* Rose Pine background */
+@define-color foreground #e0def4; /* Rose Pine foreground */
+@define-color red #eb6f92; /* Rose Pine red */
+@define-color green #31748f; /* Rose Pine green */
+@define-color yellow #f6c177; /* Rose Pine yellow */
+@define-color blue #9ccfd8; /* Rose Pine blue */
+@define-color magenta #c4a7e7; /* Rose Pine magenta */
+@define-color cyan #ebbcba; /* Rose Pine cyan */
+@define-color black #26233a; /* Rose Pine black */
 
 /* Optionally keep these if you use animation/hover contrast */
-@define-color bright-red #ff899d;
-@define-color bright-green #9fe044;
-@define-color bright-yellow #faba4a;
-@define-color bright-blue #8db0ff;
-@define-color bright-magenta #c7a9ff;
-@define-color bright-cyan #a4daff;
-@define-color bright-black #414868;
-@define-color bright-white #c0caf5;
+@define-color bright-red #eb6f92;
+@define-color bright-green #31748f;
+@define-color bright-yellow #f6c177;
+@define-color bright-blue #9ccfd8;
+@define-color bright-magenta #c4a7e7;
+@define-color bright-cyan #ebbcba;
+@define-color bright-black #6e6a86;
+@define-color bright-white #e0def4;
 
 /* Accents */
-@define-color orange #ff9e64; /* index 16 */
-@define-color error  #db4b4b; /* index 17 */
+@define-color orange #f6c177; /* closest Rose Pine accent */
+@define-color error  #eb6f92; /* closest Rose Pine red/error */
 
 /* Reset all styles */
 * {
