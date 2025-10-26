@@ -243,7 +243,11 @@
 			"special-visible-only": false,
 			"format-icons": {
 				"magic": " ",
-				"10": "󰊴 "
+				"6": "󰈹",
+				"7": "",
+				"8": "",
+				"9": "",
+				"10": ""
 			}
 		},
 		"pulseaudio#output": {

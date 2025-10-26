@@ -229,12 +229,6 @@
   color: @blue;
 }
 
-/* Focused workspace & monitor */
-#waybar.main #workspaces button.active {
-  color: @blue;
-  border: 1.5px solid @cyan;
-}
-
 /* Style when cursor is on the button */
 #waybar.main #workspaces button:hover {
   color: @blue;
