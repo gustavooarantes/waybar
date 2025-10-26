@@ -1,35 +1,31 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
+/* Define colors using Gruvbox Dark palette */
+@define-color background #282828; /* Primary background */
+@define-color foreground #ebdbb2; /* Primary foreground */
+@define-color black #282828;       /* Normal black */
+@define-color red #cc241d;         /* Normal red */
+@define-color green #98971a;       /* Normal green */
+@define-color yellow #d79921;      /* Normal yellow */
+@define-color blue #458588;        /* Normal blue */
+@define-color magenta #b16286;     /* Normal magenta */
+@define-color cyan #689d6a;        /* Normal cyan */
+@define-color white #a89984;       /* Normal white */
 
-/* Define Kanagawa-wave colors */
-@define-color background #1f1f28; /* Primary background */
-@define-color foreground #dcd7ba; /* Primary foreground */
-@define-color red #c34043;       /* Normal red */
-@define-color green #76946a;     /* Normal green */
-@define-color yellow #c0a36e;    /* Normal yellow */
-@define-color blue #7e9cd8;      /* Normal blue */
-@define-color magenta #957fb8;   /* Normal magenta */
-@define-color cyan #6a9589;      /* Normal cyan */
-@define-color black #090618;     /* Normal black */
+/* Bright variants */
+@define-color bright-black #928374;
+@define-color bright-red #fb4934;
+@define-color bright-green #b8bb26;
+@define-color bright-yellow #fabd2f;
+@define-color bright-blue #83a598;
+@define-color bright-magenta #d3869b;
+@define-color bright-cyan #8ec07c;
+@define-color bright-white #ebdbb2;
 
-/* Bright colors */
-@define-color bright-red #e82424;
-@define-color bright-green #98bb6c;
-@define-color bright-yellow #e6c384;
-@define-color bright-blue #7fb4ca;
-@define-color bright-magenta #938aa9;
-@define-color bright-cyan #7aa89f;
-@define-color bright-black #727169;
-@define-color bright-white #dcd7ba;
-
-/* Accents / indexed colors */
-@define-color orange #ffa066;    /* Index 16 */
-@define-color error  #ff5d62;    /* Index 17 */
-
-/* Optional selection colors (if used in hover/selection) */
-@define-color selection-background #2d4f67;
-@define-color selection-foreground #c8c093;
+/* Accents */
+@define-color orange #d65d0e;      /* combinando com vibe Gruvbox */
+@define-color error  #cc241d;       /* vermelho de erro */
 
 /* Reset all styles */
 * {
