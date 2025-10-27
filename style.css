@@ -1,30 +1,31 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Define Rose Pine colors */
-@define-color background #191724; /* Rose Pine background */
-@define-color foreground #e0def4; /* Rose Pine foreground */
-@define-color red #eb6f92; /* Rose Pine red */
-@define-color green #31748f; /* Rose Pine green */
-@define-color yellow #f6c177; /* Rose Pine yellow */
-@define-color blue #9ccfd8; /* Rose Pine blue */
-@define-color magenta #c4a7e7; /* Rose Pine magenta */
-@define-color cyan #ebbcba; /* Rose Pine cyan */
-@define-color black #26233a; /* Rose Pine black */
+/* Define colors using Gruvbox Dark palette */
+@define-color background #282828; /* Primary background */
+@define-color foreground #ebdbb2; /* Primary foreground */
+@define-color black #282828;       /* Normal black */
+@define-color red #cc241d;         /* Normal red */
+@define-color green #98971a;       /* Normal green */
+@define-color yellow #d79921;      /* Normal yellow */
+@define-color blue #458588;        /* Normal blue */
+@define-color magenta #b16286;     /* Normal magenta */
+@define-color cyan #689d6a;        /* Normal cyan */
+@define-color white #a89984;       /* Normal white */
 
-/* Optionally keep these if you use animation/hover contrast */
-@define-color bright-red #eb6f92;
-@define-color bright-green #31748f;
-@define-color bright-yellow #f6c177;
-@define-color bright-blue #9ccfd8;
-@define-color bright-magenta #c4a7e7;
-@define-color bright-cyan #ebbcba;
-@define-color bright-black #6e6a86;
-@define-color bright-white #e0def4;
+/* Bright variants */
+@define-color bright-black #928374;
+@define-color bright-red #fb4934;
+@define-color bright-green #b8bb26;
+@define-color bright-yellow #fabd2f;
+@define-color bright-blue #83a598;
+@define-color bright-magenta #d3869b;
+@define-color bright-cyan #8ec07c;
+@define-color bright-white #ebdbb2;
 
 /* Accents */
-@define-color orange #f6c177; /* closest Rose Pine accent */
-@define-color error  #eb6f92; /* closest Rose Pine red/error */
+@define-color orange #d65d0e;
+@define-color error  #cc241d;  
 
 /* Reset all styles */
 * {
