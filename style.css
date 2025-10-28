@@ -1,31 +1,41 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Define colors using Gruvbox Dark palette */
-@define-color background #282828; /* Primary background */
-@define-color foreground #ebdbb2; /* Primary foreground */
-@define-color black #282828;       /* Normal black */
-@define-color red #cc241d;         /* Normal red */
-@define-color green #98971a;       /* Normal green */
-@define-color yellow #d79921;      /* Normal yellow */
-@define-color blue #458588;        /* Normal blue */
-@define-color magenta #b16286;     /* Normal magenta */
-@define-color cyan #689d6a;        /* Normal cyan */
-@define-color white #a89984;       /* Normal white */
+/* Define colors using Carbonfox palette */
+@define-color background #000000;   /* Primary background */
+@define-color foreground #f2f4f8;   /* Primary foreground */
+@define-color black #282828;        /* Normal black */
+@define-color red #ee5396;          /* Normal red */
+@define-color green #25be6a;        /* Normal green */
+@define-color yellow #08bdba;       /* Normal yellow */
+@define-color blue #78a9ff;         /* Normal blue */
+@define-color magenta #be95ff;      /* Normal magenta */
+@define-color cyan #33b1ff;         /* Normal cyan */
+@define-color white #dfdfe0;        /* Normal white */
 
 /* Bright variants */
-@define-color bright-black #928374;
-@define-color bright-red #fb4934;
-@define-color bright-green #b8bb26;
-@define-color bright-yellow #fabd2f;
-@define-color bright-blue #83a598;
-@define-color bright-magenta #d3869b;
-@define-color bright-cyan #8ec07c;
-@define-color bright-white #ebdbb2;
+@define-color bright-black #484848;
+@define-color bright-red #f16da6;
+@define-color bright-green #46c880;
+@define-color bright-yellow #2dc7c4;
+@define-color bright-blue #8cb6ff;
+@define-color bright-magenta #c8a5ff;
+@define-color bright-cyan #52bdff;
+@define-color bright-white #e4e4e5;
+
+/* Dim variants */
+@define-color dim-black #222222;
+@define-color dim-red #ca4780;
+@define-color dim-green #1fa25a;
+@define-color dim-yellow #07a19e;
+@define-color dim-blue #6690d9;
+@define-color dim-magenta #a27fd9;
+@define-color dim-cyan #2b96d9;
+@define-color dim-white #bebebe;
 
 /* Accents */
-@define-color orange #d65d0e;
-@define-color error  #cc241d;  
+@define-color orange #f16da6;  /* using bright red as accent */
+@define-color error  #ee5396;  /* normal red */
 
 /* Reset all styles */
 * {
