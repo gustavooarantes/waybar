@@ -1,41 +1,42 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Define colors using Carbonfox palette */
-@define-color background #000000;   /* Primary background */
-@define-color foreground #f2f4f8;   /* Primary foreground */
-@define-color black #282828;        /* Normal black */
-@define-color red #ee5396;          /* Normal red */
-@define-color green #25be6a;        /* Normal green */
-@define-color yellow #08bdba;       /* Normal yellow */
-@define-color blue #78a9ff;         /* Normal blue */
-@define-color magenta #be95ff;      /* Normal magenta */
-@define-color cyan #33b1ff;         /* Normal cyan */
-@define-color white #dfdfe0;        /* Normal white */
+/* === Oxocarbon Pitch Black Unified Palette === */
 
-/* Bright variants */
-@define-color bright-black #484848;
-@define-color bright-red #f16da6;
-@define-color bright-green #46c880;
-@define-color bright-yellow #2dc7c4;
-@define-color bright-blue #8cb6ff;
-@define-color bright-magenta #c8a5ff;
-@define-color bright-cyan #52bdff;
-@define-color bright-white #e4e4e5;
+/* Primary colors */
+@define-color background #000000;   /* Pure black */
+@define-color foreground #f2f4f8;   /* Light gray-white text */
 
-/* Dim variants */
-@define-color dim-black #222222;
-@define-color dim-red #ca4780;
-@define-color dim-green #1fa25a;
-@define-color dim-yellow #07a19e;
-@define-color dim-blue #6690d9;
-@define-color dim-magenta #a27fd9;
-@define-color dim-cyan #2b96d9;
-@define-color dim-white #bebebe;
+/* Normal palette */
+@define-color black   #262626;
+@define-color red     #ee5396;
+@define-color green   #42be65;
+@define-color yellow  #ffe97b;
+@define-color blue    #33b1ff;
+@define-color magenta #ff7eb6;
+@define-color cyan    #3ddbd9;
+@define-color white   #dde1e6;
+
+/* Bright palette */
+@define-color bright-black   #393939;
+@define-color bright-red     #ee5396;
+@define-color bright-green   #42be65;
+@define-color bright-yellow  #ffe97b;
+@define-color bright-blue    #33b1ff;
+@define-color bright-magenta #ff7eb6;
+@define-color bright-cyan    #3ddbd9;
+@define-color bright-white   #f2f4f8;
+
+/* Search highlight (matches Alacritty’s accent logic) */
+@define-color search-match-bg #3ddbd9;
+@define-color search-match-fg #161616;
 
 /* Accents */
-@define-color orange #f16da6;  /* using bright red as accent */
-@define-color error  #ee5396;  /* normal red */
+@define-color accent-orange #fe8019; /* optional border/accent color */
+@define-color accent-yellow #fabd2f; /* subtle contrast option */
+
+/* Error/alert */
+@define-color error #ee5396;
 
 /* Reset all styles */
 * {
