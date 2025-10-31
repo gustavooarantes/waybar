@@ -1,42 +1,44 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* === Oxocarbon Pitch Black Unified Palette === */
+/* Monokai-Pro Classic - pitch-black background for Waybar / Xresources */
 
 /* Primary colors */
-@define-color background #000000;   /* Pure black */
-@define-color foreground #f2f4f8;   /* Light gray-white text */
+@define-color background #000000;   /* Primary background - pitch black */
+@define-color foreground #fdfff1;   /* Primary foreground (text) */
+@define-color black      #161613;   /* Normal black (dark2) */
+@define-color red        #f92672;   /* Normal red (accent1) */
+@define-color green      #a6e22e;   /* Normal green (accent4) */
+@define-color yellow     #e6db74;   /* Normal yellow (accent3) */
+@define-color blue       #66d9ef;   /* Normal blue (accent5) */
+@define-color magenta    #ae81ff;   /* Normal magenta (accent6) */
+@define-color cyan       #66d9ef;   /* Normal cyan (accent5) */
+@define-color white      #fdfff1;   /* Normal white (text) */
 
-/* Normal palette */
-@define-color black   #262626;
-@define-color red     #ee5396;
-@define-color green   #42be65;
-@define-color yellow  #ffe97b;
-@define-color blue    #33b1ff;
-@define-color magenta #ff7eb6;
-@define-color cyan    #3ddbd9;
-@define-color white   #dde1e6;
+/* Bright variants */
+@define-color bright-black   #1d1e19;  /* dark1 */
+@define-color bright-red     #f92672;  /* accent1 */
+@define-color bright-green   #a6e22e;  /* accent4 */
+@define-color bright-yellow  #e6db74;  /* accent3 */
+@define-color bright-blue    #66d9ef;  /* accent5 */
+@define-color bright-magenta #ae81ff;  /* accent6 */
+@define-color bright-cyan    #66d9ef;  /* accent5 */
+@define-color bright-white   #fdfff1;  /* text */
 
-/* Bright palette */
-@define-color bright-black   #393939;
-@define-color bright-red     #ee5396;
-@define-color bright-green   #42be65;
-@define-color bright-yellow  #ffe97b;
-@define-color bright-blue    #33b1ff;
-@define-color bright-magenta #ff7eb6;
-@define-color bright-cyan    #3ddbd9;
-@define-color bright-white   #f2f4f8;
-
-/* Search highlight (matches Alacritty’s accent logic) */
-@define-color search-match-bg #3ddbd9;
-@define-color search-match-fg #161616;
+/* Dim variants */
+@define-color dim-black   #3b3c35;  /* dimmed5 */
+@define-color dim-red     #f92672;  /* accent1 */
+@define-color dim-green   #a6e22e;  /* accent4 */
+@define-color dim-yellow  #e6db74;  /* accent3 */
+@define-color dim-blue    #66d9ef;  /* accent5 */
+@define-color dim-magenta #ae81ff;  /* accent6 */
+@define-color dim-cyan    #66d9ef;  /* accent5 */
+@define-color dim-white   #c0c1b5;  /* dimmed1 */
 
 /* Accents */
-@define-color accent-orange #fe8019; /* optional border/accent color */
-@define-color accent-yellow #fabd2f; /* subtle contrast option */
+@define-color orange #e6db74;  /* Using accent3 as orange highlight */
+@define-color error  #f92672;  /* accent1 */
 
-/* Error/alert */
-@define-color error #ee5396;
 
 /* Reset all styles */
 * {
