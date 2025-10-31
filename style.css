@@ -1,44 +1,33 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Monokai-Pro Classic - pitch-black background for Waybar / Xresources */
-
 /* Primary colors */
-@define-color background #000000;   /* Primary background - pitch black */
-@define-color foreground #fdfff1;   /* Primary foreground (text) */
-@define-color black      #161613;   /* Normal black (dark2) */
-@define-color red        #f92672;   /* Normal red (accent1) */
-@define-color green      #a6e22e;   /* Normal green (accent4) */
-@define-color yellow     #e6db74;   /* Normal yellow (accent3) */
-@define-color blue       #66d9ef;   /* Normal blue (accent5) */
-@define-color magenta    #ae81ff;   /* Normal magenta (accent6) */
-@define-color cyan       #66d9ef;   /* Normal cyan (accent5) */
-@define-color white      #fdfff1;   /* Normal white (text) */
+@define-color background #192330; /* Primary background */
+@define-color foreground #cdcecf; /* Primary foreground */
+
+/* Normal colors */
+@define-color black #393b44;
+@define-color red #c94f6d;
+@define-color green #81b29a;
+@define-color yellow #dbc074;
+@define-color blue #719cd6;
+@define-color magenta #9d79d6;
+@define-color cyan #63cdcf;
+@define-color white #dfdfe0;
 
 /* Bright variants */
-@define-color bright-black   #1d1e19;  /* dark1 */
-@define-color bright-red     #f92672;  /* accent1 */
-@define-color bright-green   #a6e22e;  /* accent4 */
-@define-color bright-yellow  #e6db74;  /* accent3 */
-@define-color bright-blue    #66d9ef;  /* accent5 */
-@define-color bright-magenta #ae81ff;  /* accent6 */
-@define-color bright-cyan    #66d9ef;  /* accent5 */
-@define-color bright-white   #fdfff1;  /* text */
-
-/* Dim variants */
-@define-color dim-black   #3b3c35;  /* dimmed5 */
-@define-color dim-red     #f92672;  /* accent1 */
-@define-color dim-green   #a6e22e;  /* accent4 */
-@define-color dim-yellow  #e6db74;  /* accent3 */
-@define-color dim-blue    #66d9ef;  /* accent5 */
-@define-color dim-magenta #ae81ff;  /* accent6 */
-@define-color dim-cyan    #66d9ef;  /* accent5 */
-@define-color dim-white   #c0c1b5;  /* dimmed1 */
+@define-color bright-black #575860;
+@define-color bright-red #d16983;
+@define-color bright-green #8ebaa4;
+@define-color bright-yellow #e0c989;
+@define-color bright-blue #86abdc;
+@define-color bright-magenta #baa1e2;
+@define-color bright-cyan #7ad5d6;
+@define-color bright-white #e4e4e5;
 
 /* Accents */
-@define-color orange #e6db74;  /* Using accent3 as orange highlight */
-@define-color error  #f92672;  /* accent1 */
-
+@define-color orange #f4a261;
+@define-color error  #c94f6d;
 
 /* Reset all styles */
 * {
