@@ -1,33 +1,43 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Catppuccin Frappe */
-@define-color background #303446;
-@define-color foreground #c6d0f5;
+/* Rose Pine Main - Waybar */
 
-/* Core palette */
-@define-color black   #51576d;
-@define-color red     #e78284;
-@define-color green   #a6d189;
-@define-color yellow  #e5c890;
-@define-color blue    #8caaee;
-@define-color magenta #f4b8e4;
-@define-color cyan    #81c8be;
-@define-color white   #b5bfe2;
+/* Primary colors */
+@define-color background #191724;   /* Base background */
+@define-color foreground #e0def4;   /* Primary foreground (text) */
+@define-color black      #191724;   /* Mantle / dark base */
+@define-color red        #eb6f92;   /* Pink / accent1 */
+@define-color green      #9ccfd8;   /* Green / accent4 */
+@define-color yellow     #f6c177;   /* Yellow / accent3 */
+@define-color blue       #31748f;   /* Blue / accent5 */
+@define-color magenta    #c4a7e7;   /* Mauve / accent6 */
+@define-color cyan       #9ccfd8;   /* Teal / accent7 */
+@define-color white      #e0def4;   /* Text */
 
-/* Bright variants (optional, for states or icons) */
-@define-color bright-black   #626880;
-@define-color bright-red     #ea999c;
-@define-color bright-green   #babbf1;
-@define-color bright-yellow  #ef9f76;
-@define-color bright-blue    #99d1db;
-@define-color bright-magenta #ca9ee6;
-@define-color bright-cyan    #85c1dc;
-@define-color bright-white   #c6d0f5;
+/* Bright variants */
+@define-color bright-black   #6e6a86; /* Surface1 / muted */
+@define-color bright-red     #eb6f92;
+@define-color bright-green   #9ccfd8;
+@define-color bright-yellow  #f6c177;
+@define-color bright-blue    #31748f;
+@define-color bright-magenta #c4a7e7;
+@define-color bright-cyan    #9ccfd8;
+@define-color bright-white   #f5e0dc;
 
-/* Accent / semantic colors */
-@define-color orange #ef9f76;
-@define-color error  #e78284;
+/* Dim variants */
+@define-color dim-black   #1f1d2e; /* Surface2 / secondary bg */
+@define-color dim-red     #c55f7e;
+@define-color dim-green   #85bacd;
+@define-color dim-yellow  #d9a660;
+@define-color dim-blue    #28687d;
+@define-color dim-magenta #ab94e0;
+@define-color dim-cyan    #85bacd;
+@define-color dim-white   #b6adc8;
+
+/* Accents */
+@define-color orange #f6c177;  /* Gold / highlight */
+@define-color error  #eb6f92;   /* Pink / error accent */
 
 /* Reset all styles */
 * {
