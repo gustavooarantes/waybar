@@ -1,43 +1,43 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Rose Pine Main - Waybar */
+/* Catppuccin Mocha (with black bg) */
 
 /* Primary colors */
-@define-color background #191724;   /* Base background */
-@define-color foreground #e0def4;   /* Primary foreground (text) */
-@define-color black      #191724;   /* Mantle / dark base */
-@define-color red        #eb6f92;   /* Pink / accent1 */
-@define-color green      #9ccfd8;   /* Green / accent4 */
-@define-color yellow     #f6c177;   /* Yellow / accent3 */
-@define-color blue       #31748f;   /* Blue / accent5 */
-@define-color magenta    #c4a7e7;   /* Mauve / accent6 */
-@define-color cyan       #9ccfd8;   /* Teal / accent7 */
-@define-color white      #e0def4;   /* Text */
+@define-color background #000000;   /* Base background */
+@define-color foreground #cdd6f4;   /* Primary foreground (text) */
+@define-color black      #000000;   /* Mantle / dark base */
+@define-color red        #f38ba8;   /* Red / accent1 */
+@define-color green      #a6e3a1;   /* Green / accent4 */
+@define-color yellow     #f9e2af;   /* Yellow / accent3 */
+@define-color blue       #89b4fa;   /* Blue / accent5 */
+@define-color magenta    #f5c2e7;   /* Mauve / accent6 */
+@define-color cyan       #94e2d5;   /* Teal / accent7 */
+@define-color white      #cdd6f4;   /* Text */
 
 /* Bright variants */
-@define-color bright-black   #6e6a86; /* Surface1 / muted */
-@define-color bright-red     #eb6f92;
-@define-color bright-green   #9ccfd8;
-@define-color bright-yellow  #f6c177;
-@define-color bright-blue    #31748f;
-@define-color bright-magenta #c4a7e7;
-@define-color bright-cyan    #9ccfd8;
-@define-color bright-white   #f5e0dc;
+@define-color bright-black   #585b70; /* Surface1 / muted */
+@define-color bright-red     #f38ba8;
+@define-color bright-green   #a6e3a1;
+@define-color bright-yellow  #f9e2af;
+@define-color bright-blue    #89b4fa;
+@define-color bright-magenta #f5c2e7;
+@define-color bright-cyan    #94e2d5;
+@define-color bright-white   #a6adc8;
 
 /* Dim variants */
-@define-color dim-black   #1f1d2e; /* Surface2 / secondary bg */
-@define-color dim-red     #c55f7e;
-@define-color dim-green   #85bacd;
-@define-color dim-yellow  #d9a660;
-@define-color dim-blue    #28687d;
-@define-color dim-magenta #ab94e0;
-@define-color dim-cyan    #85bacd;
-@define-color dim-white   #b6adc8;
+@define-color dim-black   #1e1e2e; /* Surface2 / secondary bg */
+@define-color dim-red     #c14b69;
+@define-color dim-green   #8ecf8e;
+@define-color dim-yellow  #e5c890;
+@define-color dim-blue    #739df2;
+@define-color dim-magenta #d4a5ce;
+@define-color dim-cyan    #7ddbd2;
+@define-color dim-white   #b4befe;
 
 /* Accents */
-@define-color orange #f6c177;  /* Gold / highlight */
-@define-color error  #eb6f92;   /* Pink / error accent */
+@define-color orange #fab387;  /* Peach / highlight */
+@define-color error  #f38ba8;  /* Red / error accent */
 
 /* Reset all styles */
 * {
