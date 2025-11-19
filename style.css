@@ -1,0 +1,262 @@
+/* vim:fileencoding=utf-8:foldmethod=marker
+*/
+
+/* Catppuccin Frappe */
+
+/* Primary colors */
+@define-color background #303446;   /* base */
+@define-color foreground #c6d0f5;   /* text */
+@define-color black      #232634;   /* crust */
+@define-color red        #e78284;   /* red */
+@define-color green      #a6d189;   /* green */
+@define-color yellow     #e5c890;   /* yellow */
+@define-color blue       #8caaee;   /* blue */
+@define-color magenta    #f4b8e4;   /* mauve */
+@define-color cyan       #81c8be;   /* teal */
+@define-color white      #c6d0f5;   /* text */
+
+/* Bright variants (Frappe doesn't define "bright"; using standard lighten approach) */
+@define-color bright-black   #414559; 
+@define-color bright-red     #e78284;
+@define-color bright-green   #a6d189;
+@define-color bright-yellow  #e5c890;
+@define-color bright-blue    #8caaee;
+@define-color bright-magenta #f4b8e4;
+@define-color bright-cyan    #81c8be;
+@define-color bright-white   #a5adce;
+
+/* Dim variants (slightly darkened versions within palette constraints) */
+@define-color dim-black   #292c3c; /* mantle */
+@define-color dim-red     #d35f65;
+@define-color dim-green   #88b368;
+@define-color dim-yellow  #d4b472;
+@define-color dim-blue    #6e94e8;
+@define-color dim-magenta #d79acb;
+@define-color dim-cyan    #6bb2a6;
+@define-color dim-white   #b8c0e0;
+
+/* Accents */
+@define-color orange #ef9f76;  /* peach */
+@define-color error  #e78284;  /* red */
+
+/* Reset all styles */
+* {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* Keyframes for main bar criticals */
+@keyframes blink-critical-text {
+  to {
+    color: @red;
+  }
+}
+
+@keyframes blink-modifier-text {
+  to {
+    color: @blue;
+  }
+}
+
+/* Main bar defaults */
+#waybar.main {
+  background: @background;
+  border-radius: 0px;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 9pt;
+  font-weight: 500;
+}
+
+/* Botões da barra */
+#waybar.main button {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 9pt;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+#waybar.main > *,
+#waybar.indicator > * {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Main bar modules padding horizontal */
+#waybar.main #custom-nvidia,
+#waybar.main #custom-weather,
+#waybar.main #custom-battery,
+#waybar.main #keyboard-state,
+#waybar.main #network,
+#waybar.main #battery,
+#waybar.main #backlight,
+#waybar.main #clock,
+#waybar.main #cpu,
+#waybar.main #language,
+#waybar.main #memory.swap,
+#waybar.main #memory.ram,
+#waybar.main #submap,
+#waybar.main #pulseaudio,
+#waybar.main #temperature,
+#waybar.main #tray,
+#waybar.main #window,
+#waybar.main #disk {
+  padding-left: 8pt;
+  padding-right: 8pt;
+}
+
+#waybar.main #tray {
+  padding-right: 6pt;
+}
+
+#waybar.main #custom-weather {
+  padding-right: 3pt;
+}
+
+/* Module colors */
+#waybar.main #custom-nvidia,
+#waybar.main #cpu,
+#waybar.main #temperature,
+#waybar.main #memory.ram,
+#waybar.main #memory.swap,
+#waybar.main #disk {
+  color: @cyan;
+}
+
+#waybar.main #pulseaudio {
+  color: @magenta;
+}
+
+#waybar.main #custom-battery,
+#waybar.main #language,
+#waybar.main #backlight,
+#waybar.main #battery {
+  color: @green;
+}
+
+#waybar.main #custom-weather,
+#waybar.main #clock {
+  color: @yellow;
+}
+
+#waybar.main #window {
+  color: @blue;
+  margin-top: 0px;
+}
+
+#waybar.main #network.info {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: @foreground;
+  background: transparent;
+}
+
+/* Submap */
+#waybar.main #submap.󰲏 {
+  color: @yellow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+#waybar.main #submap. {
+  color: @green;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-modifier-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Main bar criticals */
+#waybar.main #custom-nvidia.critical,
+#waybar.main #custom-battery.critical,
+#waybar.main #workspaces button.urgent,
+#waybar.main #workspaces button.special.urgent,
+#waybar.main #memory.swap.critical,
+#waybar.main #memory.ram.critical,
+#waybar.main #cpu.critical,
+#waybar.main #temperature.critical,
+#waybar.main #battery.critical.discharging {
+  color: @red;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-critical-text;
+  animation-duration: 1s;
+  animation-timing-function: steps(15);
+}
+
+/* Workspace buttons */
+#waybar.main #workspaces button {
+  color: @foreground;
+  background: transparent;
+  border: 1.5px solid transparent;
+  padding-left: 2pt;
+  padding-right: 2pt;
+  border-radius: 16px;
+  margin: 3.5px 4px 3.5px 4px;
+  transition: all 0.25s ease;
+}
+
+#waybar.main #workspaces button.visible {
+  color: @blue;
+}
+
+#waybar.main #workspaces button:hover {
+  color: @blue;
+}
+
+/* Custom slashes as spacers */
+#waybar.main #custom-spacer1,
+#waybar.main #custom-spacer2,
+#waybar.main #custom-spacer3 {
+  font-size: 10pt;
+  font-weight: bold;
+  color: @foreground;
+  background: transparent;
+}
+
+/* Custom tray icon */
+#waybar.main #custom-trayicon {
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: italic;
+  color: @blue;
+  background: transparent;
+  padding-right: 6pt;
+  padding-left: 2pt;
+}
+
+/* Tooltip */
+tooltip {
+  background: rgba(26, 27, 38, 0.75); /* @background 75% */
+  border: 3px solid @cyan;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: "JetBrains Mono Nerd Font";
+}
+
+#waybar.main #tray menu {
+  background: rgba(26, 27, 38, 0.75);
+  border: 3px solid @cyan;
+  border-radius: 8px;
+}
+
+/* Indicator bar battery module */
+#waybar.indicator {
+  font-size: 27px;
+  color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+}
+
+#waybar.indicator #custom-batteryindicator {
+  border: 2.5px solid @cyan;
+  background: rgba(26, 27, 38, 0.75);
+  border-radius: 8pt;
+  padding-left: 2237.5px;
+}
