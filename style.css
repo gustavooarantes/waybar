@@ -1,43 +1,43 @@
 /* vim:fileencoding=utf-8:foldmethod=marker
 */
 
-/* Catppuccin Frappe */
+/* Black Catppuccin */
 
 /* Primary colors */
 @define-color background #000000;   /* base */
-@define-color foreground #000000;   /* text */
-@define-color black      #232634;   /* crust */
-@define-color red        #e78284;   /* red */
-@define-color green      #a6d189;   /* green */
-@define-color yellow     #e5c890;   /* yellow */
-@define-color blue       #8caaee;   /* blue */
-@define-color magenta    #f4b8e4;   /* mauve */
-@define-color cyan       #81c8be;   /* teal */
-@define-color white      #c6d0f5;   /* text */
+@define-color foreground #cdd6f4;   /* text */
+@define-color black      #45475a;   /* black */
+@define-color red        #f38ba8;   /* red */
+@define-color green      #a6e3a1;   /* green */
+@define-color yellow     #f9e2af;   /* yellow */
+@define-color blue       #89b4fa;   /* blue */
+@define-color magenta    #f5c2e7;   /* magenta */
+@define-color cyan       #94e2d5;   /* cyan */
+@define-color white      #bac2de;   /* white */
 
-/* Bright variants (Frappe doesn't define "bright"; using standard lighten approach) */
-@define-color bright-black   #414559; 
-@define-color bright-red     #e78284;
-@define-color bright-green   #a6d189;
-@define-color bright-yellow  #e5c890;
-@define-color bright-blue    #8caaee;
-@define-color bright-magenta #f4b8e4;
-@define-color bright-cyan    #81c8be;
-@define-color bright-white   #a5adce;
+/* Bright variants */
+@define-color bright-black   #585b70;
+@define-color bright-red     #f38ba8;
+@define-color bright-green   #a6e3a1;
+@define-color bright-yellow  #f9e2af;
+@define-color bright-blue    #89b4fa;
+@define-color bright-magenta #f5c2e7;
+@define-color bright-cyan    #94e2d5;
+@define-color bright-white   #a6adc8;
 
-/* Dim variants (slightly darkened versions within palette constraints) */
-@define-color dim-black   #292c3c; /* mantle */
-@define-color dim-red     #d35f65;
-@define-color dim-green   #88b368;
-@define-color dim-yellow  #d4b472;
-@define-color dim-blue    #6e94e8;
-@define-color dim-magenta #d79acb;
-@define-color dim-cyan    #6bb2a6;
-@define-color dim-white   #b8c0e0;
+/* Dim variants (usando mesma ideia do Alacritty) */
+@define-color dim-black   #7f849c; /* dim_foreground */
+@define-color dim-red     #f38ba8; 
+@define-color dim-green   #a6e3a1;
+@define-color dim-yellow  #f9e2af;
+@define-color dim-blue    #89b4fa;
+@define-color dim-magenta #f5c2e7;
+@define-color dim-cyan    #94e2d5;
+@define-color dim-white   #cdd6f4; /* bright_foreground */
 
 /* Accents */
-@define-color orange #ef9f76;  /* peach */
-@define-color error  #e78284;  /* red */
+@define-color orange #fab387;  /* orange */
+@define-color error  #f38ba8;  /* red */
 
 /* Reset all styles */
 * {
