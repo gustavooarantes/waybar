@@ -4,8 +4,8 @@
 /* Catppuccin Frappe */
 
 /* Primary colors */
-@define-color background #303446;   /* base */
-@define-color foreground #c6d0f5;   /* text */
+@define-color background #000000;   /* base */
+@define-color foreground #000000;   /* text */
 @define-color black      #232634;   /* crust */
 @define-color red        #e78284;   /* red */
 @define-color green      #a6d189;   /* green */
